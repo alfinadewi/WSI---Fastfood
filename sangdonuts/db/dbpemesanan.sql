@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Jan 2022 pada 16.53
+-- Waktu pembuatan: 03 Jan 2022 pada 12.51
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 7.3.27
 
@@ -38,11 +38,8 @@ CREATE TABLE `pemesanan` (
 --
 
 INSERT INTO `pemesanan` (`id_pemesanan`, `tanggal_pemesanan`, `total_belanja`) VALUES
-(35, '2020-06-22', 50000),
-(38, '2020-06-22', 17000),
-(39, '2020-06-22', 25000),
-(40, '2020-06-22', 22000),
-(41, '2020-06-22', 56000);
+(43, '2022-01-02', 20000),
+(44, '2022-01-02', 10000);
 
 -- --------------------------------------------------------
 
@@ -86,7 +83,10 @@ INSERT INTO `pemesanan_produk` (`id_pemesanan_produk`, `id_pemesanan`, `id_menu`
 (28, 42, '9', 1),
 (29, 42, '14', 1),
 (30, 42, '7', 1),
-(31, 42, '17', 1);
+(31, 42, '17', 1),
+(32, 43, '6', 1),
+(33, 43, '15', 1),
+(34, 44, '16', 1);
 
 -- --------------------------------------------------------
 
@@ -108,18 +108,18 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_menu`, `nama_menu`, `jenis_menu`, `stok`, `harga`, `gambar`) VALUES
-(6, 'Paket 1 - Isi 4', 'Makanan', 80, 12000, 'paket 1.jpg'),
-(7, 'Paket 2 - Isi 6', 'Makanan', 50, 13000, 'paket 2.jpg'),
-(8, 'Paket 3 - Isi 9', 'Makanan', 50, 17000, 'paket 3.jpg'),
-(9, 'Paket 4 - Isi 12', 'Makanan', 45, 20000, 'paket 4.jpg'),
-(10, 'Vanilla Late Boba Cheese', 'Minuman', 50, 12000, '.jpg'),
-(11, 'Mango Boba Cheese', 'Minuman', 78, 10000, '.jpg'),
-(12, 'Thai Tea Boba Cheese', 'Minuman', 100, 2000, '.jpeg'),
-(13, ' Strawberry Boba Cheese', 'Minuman', 55, 8000, '.jpg'),
-(14, 'Taro Boba Cheese', 'Minuman', 50, 10000, '.jpg'),
-(15, 'Vanilla Blue Boba Cheese', 'Minuman', 50, 10000, '.jpg'),
-(16, 'Green Tea Boba Cheese', 'Minuman', 60, 5000, '.jpg'),
-(17, 'Choco Boba Cheese', 'Minuman', 100, 4000, '.jpg');
+(6, 'Paket 1 - Isi 4', 'Makanan', 80, 10000, 'paket 1.jpg'),
+(7, 'Paket 2 - Isi 6', 'Makanan', 80, 15000, 'paket 2.jpg'),
+(8, 'Paket 3 - Isi 9', 'Makanan', 80, 20000, 'paket 3.jpg'),
+(9, 'Paket 4 - Isi 12', 'Makanan', 80, 30000, 'paket 4.jpg'),
+(10, 'Vanilla Late Boba ', 'Minuman', 100, 10000, 'vanila late.jpg'),
+(11, 'Mango Boba ', 'Minuman', 100, 10000, 'mango.jpg'),
+(12, 'Thai Tea Boba ', 'Minuman', 100, 10000, 'thai tea.jpg'),
+(13, ' Strawberry Boba ', 'Minuman', 100, 10000, 'stroberi.jpg'),
+(14, 'Taro Boba ', 'Minuman', 100, 10000, 'taro.jpg'),
+(15, 'Vanilla Blue Boba ', 'Minuman', 100, 10000, 'vanila blue.jpg'),
+(16, 'Green Tea Boba ', 'Minuman', 100, 10000, 'green tea.jpg'),
+(17, 'Choco Boba ', 'Minuman', 100, 10000, 'choco.jpg');
 
 -- --------------------------------------------------------
 
@@ -144,9 +144,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`, `nama_lengkap`, `jenis_kelamin`, `tanggal_lahir`, `alamat`, `hp`, `status`) VALUES
-(3, 'admin', 'admin', 'Alfirdaus Muhammad Farhan', 'Laki-Laki', '1998-05-19', 'Tanjung Piayu', '089123614882', 'admin'),
-(4, 'user', 'user', 'Rinaldo', 'Laki-Laki', '1998-10-22', 'Tanjung Uma', '089560328673', 'user'),
-(7, 'Wilda112', 'wilda01_', 'Wilda Wahdania', 'Perempuan', '2002-01-01', 'desa kedungdalem kecamata', '085704197599', 'user');
+(7, 'Wilda112', 'wilda01_', 'Wilda Wahdania', 'Perempuan', '2002-01-01', 'desa kedungdalem kecamata', '085704197599', 'user'),
+(8, 'user', 'user', 'SangDonuts', 'Perempuan', '2002-01-01', 'desa kedungdalem kecamata', '085704197799', 'user'),
+(9, 'admin', 'admin', 'Sangdonuts', 'Perempuan', '2002-01-02', 'desa kedungdalem kecamata', '082141197799', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -184,25 +184,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `pemesanan`
 --
 ALTER TABLE `pemesanan`
-  MODIFY `id_pemesanan` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id_pemesanan` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT untuk tabel `pemesanan_produk`
 --
 ALTER TABLE `pemesanan_produk`
-  MODIFY `id_pemesanan_produk` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id_pemesanan_produk` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_menu` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_menu` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
