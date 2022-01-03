@@ -81,7 +81,7 @@
 
           <div class="col-md-6 d-flex justify-content-start">
             <div class="card bg-dark text-white border-light">
-              <img src="images/background/menu3.jpg" class="card-img" alt="Lihat Pesanan">
+              <img src="images/background/menu2.jpg" class="card-img" alt="Lihat Pesanan">
               <div class="card-img-overlay mt-5 text-center">
                <a href="pesanan_pembeli.php" class="btn btn-primary">LIHAT PESANAN</a>
               </div>
