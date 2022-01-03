@@ -9,11 +9,11 @@ body {
 
 /*Jumbotron*/
 .jumbotron {
-	background-image: url(images/background/menu2.jpg);
+	background-image: url(images/background/bgd.jpg);
 	background-size: cover;
 	height: 350px;
 	width: 100%;
-	color: white;
+	color: black;
 }
 
 .jumbotron .display-4 {
@@ -25,7 +25,7 @@ body {
 }
 
 .jumbotron hr {
-	border-color: white;
+	border-color: black;
 	width: 400px;
 	border-width: 3px;
 }
